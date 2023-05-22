@@ -1,22 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
+import { Button, RedButton } from './component/button/index';
+import { CallName } from './component/Text/CallName';
+import { Counter ,Counter2} from './component/Counter/Counter.js';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <input id="input" placeholder='Nhập tên của bạn' type="text"></input><br />
+        <CallName Name="Nguyên"></CallName>
+        <Counter></Counter>
+        <Counter2></Counter2>        
       </header>
     </div>
   );
