@@ -1,20 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
-import { Button, RedButton } from './component/button/index';
-import { CallName } from './component/Text/CallName';
-import { Counter ,Counter2} from './component/Counter/Counter.js';
-
+import styled from 'styled-components';
+import { Card } from "../src/component/Card"
+const AppWrapper = styled.div`
+  text-align: center;
+  .button-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px;
+    font-weight: 700;
+    font-size: 13px;
+    color: #27262E;
+  }`
 function App() {
   return (
-    <div className="App">
+    <AppWrapper>
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <input id="input" placeholder='Nhập tên của bạn' type="text"></input><br />
-        <CallName Name="Nguyên"></CallName>
-        <Counter></Counter>
-        <Counter2></Counter2>        
+        <Card title={"Revenue"} amount="5.00" percent={12.3}/>
+        <Card title={"Spending"} amount="2.00" percent={8.1}/>
+        <Card title={"ROI"} amount="14.02" percent={-5.1}/>
+        <Card title={"Estimated"} amount="7.00" percent={3.2}/>
       </header>
-    </div>
+    </AppWrapper>
   );
 }
 
