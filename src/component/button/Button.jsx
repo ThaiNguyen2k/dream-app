@@ -23,5 +23,5 @@ const Img = styled.img`
 `
 
 export const Button = ({ percent, children, ...rest }) => {
-    return <Btn percent={percent} {...rest} ><Img src={percent < 0 ? redArrow : greenArrow} alt="alt"></Img>{children}</Btn>
+    return <Btn percent={percent} {...rest} ><Img src={percent < 0 ? redArrow : greenArrow} alt="alt"></Img>{Math.abs(children)}%</Btn>
 }

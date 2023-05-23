@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import { Button } from '../button/index';
 import ethIcon from '../../img/ethIcon.png'
+import Plus from "../../img/plus.png"
+
 const StyledCard = styled.div`
   padding: 24px;
   background-color: white;
@@ -27,6 +29,14 @@ const StyledCard = styled.div`
 
     color: #27262E;
   }
+  .content {
+    font-size: 24px;
+    line-height: 31px;
+
+    /* Text/color1 */
+
+    color: #27262E;
+  }
   .ammount-wrapper {
     margin-bottom: 12px;
   }
@@ -43,9 +53,10 @@ export const Card = ({title, amount, content, percent}) => {
       <img className='eth' src={ethIcon} alt="eth-icon"></img><span className='amount'>{amount}</span> ETH
     </div>:
     <div>
-    <span className=''>{content}</span> %
+    <img className='eth' src={Plus}></img>
+    <span className='content'>{content}</span> %
   </div>
     }
-    <Button percent={percent} boderColor="#E9E9E9">{percent}%</Button>
+    <Button percent={percent} boderColor="#E9E9E9">{percent}</Button>
   </StyledCard>
 }
