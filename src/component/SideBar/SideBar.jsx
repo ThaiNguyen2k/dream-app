@@ -2,6 +2,8 @@ import styled from "styled-components";
 import logo from "../../img/Logo.png";
 import marketIcon from "../../img/shop.png";
 import {NavLink} from "react-router-dom";
+import judge from "../../img/judge.png";
+
 const StyledSideBar = styled.div`
   background-color: white ;
   height: 100vh;
@@ -43,7 +45,7 @@ const StyledNavItem = styled.div`
 const NavItem = ({text, path}) => {
   return (
     <StyledNavItem>
-      <img src={marketIcon} alt="nav-icon"></img>
+      <img src={text == "Home"? marketIcon : judge} alt="nav-icon"></img>
       <NavLink to={path}>{text}</NavLink>
     </StyledNavItem>
   )
