@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 import { Card } from "../component/Card"
+import  PrimaryLayout  from "../Layout";
 
 const Home=()=> {
     return (
+      <PrimaryLayout>
       <AppWrapper>
           <div className="App-header">
             <Card title={"Revenue"} amount="5.00" percent={12.3} />
@@ -11,6 +13,7 @@ const Home=()=> {
             <Card title={"Estimated"} amount="7.00" percent={3.2} />
           </div>
         </AppWrapper>
+        </PrimaryLayout>
     );
   }
   
