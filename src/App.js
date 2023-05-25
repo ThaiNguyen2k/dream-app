@@ -1,12 +1,16 @@
+import { useEffect } from "react";
 import './App.css';
-import * as React from "react"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import Login from "./Login";
 import NoPage from "./404";
 import ReactDOM from "react-dom/client";
 
+
 export default function App() {
+  useEffect(() => {
+    document.body.style.zoom = "90%";
+  }, []);
   return (
     <BrowserRouter>
       <Routes>

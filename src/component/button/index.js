@@ -1,4 +1,4 @@
 import { Button } from "./Button";
 import RedButton from "./RedButton";
-
-export {Button, RedButton}
+import ToUpBalance from "./BtnTopUpBalance";
+export {Button, RedButton, ToUpBalance}

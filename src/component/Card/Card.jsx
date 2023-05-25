@@ -11,6 +11,7 @@ const StyledCard = styled.div`
   line-height: 16px;
   display: inline-block;
   margin: 15px;
+  margin-top: 10px;
   /* Text/color2 */
 
   color: #747475;

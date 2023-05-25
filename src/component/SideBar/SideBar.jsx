@@ -11,6 +11,7 @@ import History from "../../img/clock.png"
 import Setting from "../../img/setting.png"
 import LightMode from "../../img/Light-Mode.png"
 import DarkModeToggle from "../../component/toggle";
+import CarBalance from "component/CardBalance";
 
 const StyledSideBar = styled.div`
   background-color: white ;
@@ -32,7 +33,9 @@ const StyledSideBar = styled.div`
     font-size: 10px;
     line-height: 13px;
     color: #7A797D;
-
+  }
+  .DarkMode{
+    display: flex;
   }
 `;
 const StyledNavItem = styled.div`
@@ -57,9 +60,9 @@ const P = styled.p`
 const NavItem = ({ text, path }) => {
   return (
     <StyledNavItem>
-      <img src={text === "Dashboard" ?  Catelogy : ( text === "Market" ? marketIcon : 
-      ( text === "Active Bids" ? judge : ( text === "My Portfolio" ? Coin : (text ==="Wallet"? Wallet : 
-      ( text === "Favourites"? Group: (text === "History"? History : (text === "Setting"? Setting : LightMode)))))))} alt="nav-icon"></img>
+      <img src={text === "Dashboard" ? Catelogy : (text === "Market" ? marketIcon :
+        (text === "Active Bids" ? judge : (text === "My Portfolio" ? Coin : (text === "Wallet" ? Wallet :
+          (text === "Favourites" ? Group : (text === "History" ? History : (text === "Setting" ? Setting : LightMode)))))))} alt="nav-icon"></img>
       <NavLink to={path}>{text}</NavLink>
     </StyledNavItem>
   )
@@ -85,8 +88,12 @@ const SideBar = () => {
         <NavItem text="History"></NavItem>
         <NavItem text="Setting"></NavItem>
         <P>OTHER</P>
-        <NavItem text="Light Mode">
-        </NavItem>
+        <div className="DarkMode">
+          <NavItem text="Light Mode">
+          </NavItem>
+          <DarkModeToggle></DarkModeToggle>
+        </div>
+        <CarBalance></CarBalance>
       </div>
     </StyledSideBar>
   );
