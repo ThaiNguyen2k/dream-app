@@ -1,8 +1,16 @@
 import styled from "styled-components";
 import logo from "../../img/Logo.png";
 import marketIcon from "../../img/shop.png";
-import {NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import judge from "../../img/judge.png";
+import Group from "../../img/Group.png"
+import Catelogy from "../../img/category.png"
+import Coin from "../../img/buy-crypto.png"
+import Wallet from "../../img/wallet.png"
+import History from "../../img/clock.png"
+import Setting from "../../img/setting.png"
+import LightMode from "../../img/Light-Mode.png"
+import DarkModeToggle from "../../component/toggle";
 
 const StyledSideBar = styled.div`
   background-color: white ;
@@ -12,7 +20,7 @@ const StyledSideBar = styled.div`
     display: flex;
     align-items: center;
     gap: 16px;
-    margin-bottom: 54px;
+    margin-bottom: 30px;
   }
   .logo-text {
     font-weight: 700;
@@ -35,17 +43,23 @@ const StyledNavItem = styled.div`
   font-weight: 500;
   line-height: 21px;
   color: #7A797D;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   a {
     text-decoration: unset;
     color: #7A797D;
   }
   
 `;
-const NavItem = ({text, path}) => {
+const P = styled.p`
+  font-weight: bold;
+  font-family: sans-serif;
+`
+const NavItem = ({ text, path }) => {
   return (
     <StyledNavItem>
-      <img src={text == "Home"? marketIcon : judge} alt="nav-icon"></img>
+      <img src={text === "Dashboard" ?  Catelogy : ( text === "Market" ? marketIcon : 
+      ( text === "Active Bids" ? judge : ( text === "My Portfolio" ? Coin : (text ==="Wallet"? Wallet : 
+      ( text === "Favourites"? Group: (text === "History"? History : (text === "Setting"? Setting : LightMode)))))))} alt="nav-icon"></img>
       <NavLink to={path}>{text}</NavLink>
     </StyledNavItem>
   )
@@ -53,18 +67,27 @@ const NavItem = ({text, path}) => {
 const SideBar = () => {
   return (
     <StyledSideBar>
-        <div className="logo">
-          <img src={logo} alt="logo"></img>
-          <div>
-            <div className="logo-text">MyNFT</div>
-            <div className="logo-desc">NFT Marketplace</div>
-          </div>
+      <div className="logo">
+        <img src={logo} alt="logo"></img>
+        <div>
+          <div className="logo-text">MyNFT</div>
+          <div className="logo-desc">NFT Marketplace</div>
         </div>
-        <div className="nav">
-          <NavItem text="Home" path="/"></NavItem>
-          <NavItem text="About" path="/about"></NavItem>
-          <NavItem text="Login" path="/login"></NavItem>
-        </div>
+      </div>
+      <div className="nav">
+        <NavItem text="Dashboard" path="/"></NavItem>
+        <NavItem text="Market" path="/login"></NavItem>
+        <NavItem text="Active Bids" path="/about"></NavItem>
+        <P>PROFILE</P>
+        <NavItem text="My Portfolio"></NavItem>
+        <NavItem text="Wallet"></NavItem>
+        <NavItem text="Favourites"></NavItem>
+        <NavItem text="History"></NavItem>
+        <NavItem text="Setting"></NavItem>
+        <P>OTHER</P>
+        <NavItem text="Light Mode">
+        </NavItem>
+      </div>
     </StyledSideBar>
   );
 };

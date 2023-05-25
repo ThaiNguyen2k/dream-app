@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Button } from '../button/index';
 import ethIcon from '../../img/ethIcon.png'
-import Plus from "../../img/plus.png"
+// import Plus from "../../img/plus.png"
 
 const StyledCard = styled.div`
   padding: 24px;
@@ -25,7 +25,7 @@ const StyledCard = styled.div`
   .amount {
     font-size: 24px;
     line-height: 31px;
-
+    font-weight: bold;
     /* Text/color1 */
 
     color: #27262E;
@@ -33,7 +33,7 @@ const StyledCard = styled.div`
   .content {
     font-size: 24px;
     line-height: 31px;
-    
+    font-weight: bold;
     /* Text/color1 */
 
     color: #27262E;
@@ -55,8 +55,8 @@ export const Card = ({ title, amount, content, percent }) => {
         <span className='amount'>{amount}</span> ETH
       </div> :
       <div className='ammount-wrapper'>
-        <img className='eth' src={Plus}></img>
-        <span className='content'>{content}</span> %
+        {/* <img className='eth' src={Plus}></img> */}
+        <span className='content'>+{content}</span> %
       </div>
     }
     <Button percent={percent} boderColor="#E9E9E9">{percent}</Button>
