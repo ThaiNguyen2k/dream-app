@@ -58,7 +58,7 @@ color: #FFFFFF;
 
 const CardMain = () => {
     return (
-        <Carousel width={750} autoPlay={true} showThumbs={false} infiniteLoop={true}>
+        <Carousel verticalSwipe="standard" autoPlay={true} showThumbs={false} infiniteLoop={true}>
             <Div>
                 <img src={BackGround} />
                 <text className="Stext">Discover, Create and Sell Your Own NFT.</text>

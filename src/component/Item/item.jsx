@@ -1,56 +1,32 @@
-import img1 from "img/item1.png"
-import img2 from "img/item2.png"
-import img3 from "img/item3.png"
-import img4 from "img/item4.png"
-import img5 from "img/item5.png"
-import img6 from "img/item6.png"
-import styled from "styled-components"
-
-
-const user=[
-    {
-        id: 1,
-        name: "Michael Jordan",
-        tag: "@jordan_",
-        img: img1
-    },
-    {
-        id: 2,
-        name: "Michael Jordan",
-        tag: "@jordan_",
-        img: img2
-    },
-    {
-        id: 3,
-        name: "Michael Jordan",
-        tag: "@jordan_",
-        img: img3
-    },
-    {
-        id: 4,
-        name: "Michael Jordan",
-        tag: "@jordan_",
-        img: img4
-    },
-    {
-        id: 5,
-        name: "Michael Jordan",
-        tag: "@jordan_",
-        img: img5
-    },
-    {
-        id: 6,
-        name: "Michael Jordan",
-        tag: "@jordan_",
-        img: img6
-    }
-]
+import styled from "styled-components";
 
 const StyleDiv = styled.div`
     display: flex;
     flex-direction: row;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    text-align: left;
+    justify-content: space-around;
     .div{
         flex-direction: column;
+    }
+    .name{
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 21px;
+        font-feature-settings: 'salt' on;
+    }
+    .tag{
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        font-feature-settings: 'salt' on;
+        color: #747475;
     }
 `
 const StyleBtn = styled.button`
@@ -59,17 +35,21 @@ const StyleBtn = styled.button`
     background: rgba(84, 41, 255, 0.1);
     border-radius: 20px;
 `
+const StyleBtnF = styled(StyleBtn)`
+    background: #5429FF;
+    color: #ffffff;
+`
 
 const Item=({name, id, img, tag, status})=>{
     return(
         <StyleDiv>
-            <p className="id">{id}</p>
-            <img src={img}></img>
+            <p className="id">{id}.</p>
+            <img width={44} height={44} src={img}></img>
             <div className="div">
                 <p className="name">{name}</p>
                 <p className="tag">{tag}</p>
             </div>
-            <StyleBtn>Follow</StyleBtn>
+            {status==0? <StyleBtn>Follow</StyleBtn> : <StyleBtnF>Following</StyleBtnF>}
         </StyleDiv>
     )
 }
