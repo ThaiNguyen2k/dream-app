@@ -15,8 +15,7 @@ background: #FFFFFF;
 border-radius: 12px;
 display: flex;
 justify-content: center;
-margin-left: 16px;
-margin-top: 10px;
+margin-top: 26px;
 .p{
     font-weight: bold;
     color: #000000;

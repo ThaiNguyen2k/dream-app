@@ -9,7 +9,7 @@ import ReactDOM from "react-dom/client";
 
 export default function App() {
   useEffect(() => {
-    document.body.style.zoom = "90%";
+    document.body.style.zoom = "100%";
   }, []);
   return (
     <BrowserRouter>

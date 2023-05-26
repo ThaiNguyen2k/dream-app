@@ -56,6 +56,7 @@ const StyledNavItem = styled.div`
 const P = styled.p`
   font-weight: bold;
   font-family: sans-serif;
+  margin-bottom: 20px;
 `
 const NavItem = ({ text, path }) => {
   return (
@@ -93,8 +94,8 @@ const SideBar = () => {
           </NavItem>
           <DarkModeToggle></DarkModeToggle>
         </div>
-        <CarBalance></CarBalance>
       </div>
+      <CarBalance></CarBalance>
     </StyledSideBar>
   );
 };
