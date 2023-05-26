@@ -1,3 +1,3 @@
 import { Card } from "./Card";
-
-export {Card}
+import CarTopCre from "./CardTopCreater";
+export {Card, CarTopCre}

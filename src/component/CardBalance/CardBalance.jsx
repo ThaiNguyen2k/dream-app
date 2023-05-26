@@ -9,6 +9,7 @@ height: 220px;
 border-radius: 16px;
 padding: 5%;
 background: linear-gradient(228.89deg, #5429FF 1.12%, #BBAAFF 100%);
+text-align: center;
 .eth-icon {
     position: absolute;
     top: 70px;

@@ -9,7 +9,7 @@ justify-content: space-between;
 align-items: center;
 gap: 21px;
 position: absolute;
-width: 196px;
+width: 90%;
 height: 49px;
 background: #FFFFFF;
 border-radius: 12px;

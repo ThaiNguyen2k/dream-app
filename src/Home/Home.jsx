@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { Card } from "../component/Card"
 import  PrimaryLayout  from "../Layout";
 import CardMain from 'component/Card/cardMain';
+import { CarTopCre } from '../component/Card';
 
 const Div = styled.div`
   display: flex;
@@ -18,6 +19,9 @@ const Home=()=> {
             <Card title={"Spending"} amount="2.00" percent={8.1} />
             <Card title={"ROI"} content="14.02" percent={-5.1} />
             <Card title={"Estimated"} amount="7.00" percent={3.2} />
+          <CarTopCre>
+
+          </CarTopCre>
           </div>
           </Div>
         </AppWrapper>
