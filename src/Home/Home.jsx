@@ -3,6 +3,7 @@ import { Card } from "../component/Card"
 import  PrimaryLayout  from "../Layout";
 import CardMain from 'component/Card/cardMain';
 import { CarTopCre } from '../component/Card';
+import { BarList } from 'component/SideBar';
 
 const Div = styled.div`
   display: flex;

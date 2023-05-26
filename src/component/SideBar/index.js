@@ -1,3 +1,4 @@
 import SideBar from "./SideBar"
+import BarList from "./BarList";
 
-export default SideBar;
+export  {SideBar, BarList };

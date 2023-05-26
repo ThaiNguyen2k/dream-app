@@ -60,19 +60,19 @@ const CardMain = () => {
     return (
         <Carousel verticalSwipe="standard" autoPlay={true} showThumbs={false} infiniteLoop={true}>
             <Div>
-                <img src={BackGround} />
+                <img src={BackGround} style={{height:'354px'}} />
                 <text className="Stext">Discover, Create and Sell Your Own NFT.</text>
                 <button className="Sbutton">Discover</button>                <button className="Sbutton">Discover</button>
                 <button className="Sbutton2">Create</button>
             </Div>
             <Div>
-                <img src={slide} />
+                <img src={slide} style={{height:'354px'}} />
                 {/* <text className="Stext">Discover, Create and Sell Your Own NFT.</text>
                 <button className="Sbutton">Discover</button>
                 <button className="Sbutton2">Create</button> */}
             </Div>
             <Div>
-                <img src={slide} />
+                <img src={slide} style={{height:'354px'}} />
                 {/* <text className="Stext">Discover, Create and Sell Your Own NFT.</text>
                 <button className="Sbutton">Discover</button>
                 <button className="Sbutton2">Create</button> */}

@@ -1,6 +1,6 @@
 import Header from "../component/Header";
 import styled from "styled-components";
-import SideBar from "../component/SideBar"
+import {SideBar} from "../component/SideBar"
 
 const LayoutStyled = styled.div`
   background-color: #1c233d;
