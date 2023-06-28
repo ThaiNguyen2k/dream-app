@@ -12,7 +12,6 @@ const Logo = () => {
         </StyleL>
     )
 }
-
 export default Logo;
 
 const StyleL = styled.div`
